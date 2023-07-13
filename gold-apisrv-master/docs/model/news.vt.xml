@@ -1,0 +1,66 @@
+<VTNamespace xmlns:xsi="" xmlns:xsd="">
+    <Name>news</Name>
+    <VTEntities>
+        <Entity Name="Category" Mode="Full">
+            <TerminalPath>categories</TerminalPath>
+            <Attributes>
+                <Attribute Name="ID" AttrName="ID" SearchName="ID" Summary="true" Search="true" Max="0" Min="0" Required="false" Validate=""></Attribute>
+                <Attribute Name="Title" AttrName="Title" SearchName="TitleILike" Summary="true" Search="true" Max="256" Min="0" Required="true" Validate=""></Attribute>
+                <Attribute Name="OrderNumber" AttrName="OrderNumber" SearchName="OrderNumber" Summary="true" Search="true" Max="0" Min="0" Required="true" Validate=""></Attribute>
+                <Attribute Name="StatusID" AttrName="StatusID" SearchName="StatusID" Summary="true" Search="true" Max="0" Min="0" Required="true" Validate="status"></Attribute>
+                <Attribute Name="IDs" SearchName="IDs" Summary="false" Search="true" Max="0" Min="0" Required="false" Validate=""></Attribute>
+            </Attributes>
+            <Template>
+                <Attribute Name="Title" VTAttrName="Title" List="true" Form="HTML_INPUT" Search="HTML_TEXT"></Attribute>
+                <Attribute Name="OrderNumber" VTAttrName="OrderNumber" List="true" Form="HTML_INPUT" Search="HTML_INPUT"></Attribute>
+                <Attribute Name="StatusID" VTAttrName="StatusID" List="true" Form="HTML_INPUT" Search="HTML_INPUT"></Attribute>
+                <Attribute Name="IDs" VTAttrName="IDs" List="false" Form="HTML_NONE" Search="HTML_SELECT"></Attribute>
+            </Template>
+        </Entity>
+        <Entity Name="News" Mode="Full">
+            <TerminalPath>news</TerminalPath>
+            <Attributes>
+                <Attribute Name="ID" AttrName="ID" SearchName="ID" Summary="true" Search="true" Max="0" Min="0" Required="false" Validate=""></Attribute>
+                <Attribute Name="Title" AttrName="Title" SearchName="TitleILike" Summary="true" Search="true" Max="256" Min="0" Required="true" Validate=""></Attribute>
+                <Attribute Name="Alias" AttrName="Alias" SearchName="Alias" Summary="true" Search="true" Max="256" Min="0" Required="true" Validate="alias"></Attribute>
+                <Attribute Name="Content" AttrName="Content" SearchName="ContentILike" Summary="true" Search="true" Max="0" Min="0" Required="false" Validate=""></Attribute>
+                <Attribute Name="CategoryID" AttrName="CategoryID" SearchName="CategoryID" Summary="true" Search="true" Max="0" Min="0" Required="true" Validate=""></Attribute>
+                <Attribute Name="CreatedAt" AttrName="CreatedAt" SearchName="CreatedAt" Summary="true" Search="true" Max="0" Min="0" Required="false" Validate=""></Attribute>
+                <Attribute Name="UpdatedAt" AttrName="UpdatedAt" SearchName="UpdatedAt" Summary="true" Search="true" Max="0" Min="0" Required="false" Validate=""></Attribute>
+                <Attribute Name="PublicationDate" AttrName="PublicationDate" SearchName="PublicationDate" Summary="true" Search="true" Max="0" Min="0" Required="true" Validate=""></Attribute>
+                <Attribute Name="TagIDs" AttrName="TagIDs" SearchName="TagIDs" Summary="false" Search="false" Max="0" Min="0" Required="false" Validate=""></Attribute>
+                <Attribute Name="StatusID" AttrName="StatusID" SearchName="StatusID" Summary="true" Search="true" Max="0" Min="0" Required="true" Validate="status"></Attribute>
+                <Attribute Name="IDs" SearchName="IDs" Summary="false" Search="true" Max="0" Min="0" Required="false" Validate=""></Attribute>
+                <Attribute Name="NotID" SearchName="NotID" Summary="false" Search="true" Max="0" Min="0" Required="false" Validate=""></Attribute>
+            </Attributes>
+            <Template>
+                <Attribute Name="Title" VTAttrName="Title" List="true" Form="HTML_INPUT" Search="HTML_TEXT"></Attribute>
+                <Attribute Name="Alias" VTAttrName="Alias" List="true" Form="HTML_INPUT" Search="HTML_TEXT"></Attribute>
+                <Attribute Name="Content" VTAttrName="Content" List="true" Form="HTML_EDITOR" Search="HTML_EDITOR"></Attribute>
+                <Attribute Name="CategoryID" VTAttrName="CategoryID" List="false" FKOpts="title" Form="HTML_INPUT" Search="HTML_INPUT"></Attribute>
+                <Attribute Name="Category" VTAttrName="CategoryID" List="true" FKOpts="title" Form="" Search="HTML_NONE"></Attribute>
+                <Attribute Name="CreatedAt" VTAttrName="CreatedAt" List="false" Form="HTML_NONE" Search="HTML_DATETIME"></Attribute>
+                <Attribute Name="UpdatedAt" VTAttrName="UpdatedAt" List="false" Form="HTML_NONE" Search="HTML_DATETIME"></Attribute>
+                <Attribute Name="PublicationDate" VTAttrName="PublicationDate" List="true" Form="HTML_DATETIME" Search="HTML_DATETIME"></Attribute>
+                <Attribute Name="TagIDs" VTAttrName="TagIDs" List="false" FKOpts="title" Form="HTML_SELECT" Search="HTML_NONE"></Attribute>
+                <Attribute Name="StatusID" VTAttrName="StatusID" List="true" Form="HTML_INPUT" Search="HTML_INPUT"></Attribute>
+                <Attribute Name="IDs" VTAttrName="IDs" List="false" Form="HTML_NONE" Search="HTML_SELECT"></Attribute>
+                <Attribute Name="NotID" VTAttrName="NotID" List="false" Form="HTML_NONE" Search="HTML_INPUT"></Attribute>
+            </Template>
+        </Entity>
+        <Entity Name="Tag" Mode="Full">
+            <TerminalPath>tags</TerminalPath>
+            <Attributes>
+                <Attribute Name="ID" AttrName="ID" SearchName="ID" Summary="true" Search="true" Max="0" Min="0" Required="false" Validate=""></Attribute>
+                <Attribute Name="Title" AttrName="Title" SearchName="TitleILike" Summary="true" Search="true" Max="256" Min="0" Required="true" Validate=""></Attribute>
+                <Attribute Name="StatusID" AttrName="StatusID" SearchName="StatusID" Summary="true" Search="true" Max="0" Min="0" Required="true" Validate="status"></Attribute>
+                <Attribute Name="IDs" SearchName="IDs" Summary="false" Search="true" Max="0" Min="0" Required="false" Validate=""></Attribute>
+            </Attributes>
+            <Template>
+                <Attribute Name="Title" VTAttrName="Title" List="true" Form="HTML_TEXT" Search="HTML_TEXT"></Attribute>
+                <Attribute Name="StatusID" VTAttrName="StatusID" List="true" Form="HTML_INPUT" Search="HTML_INPUT"></Attribute>
+                <Attribute Name="IDs" VTAttrName="IDs" List="false" Form="HTML_NONE" Search="HTML_SELECT"></Attribute>
+            </Template>
+        </Entity>
+    </VTEntities>
+</VTNamespace>

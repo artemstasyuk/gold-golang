@@ -1,0 +1,105 @@
+<Translation xmlns:xsi="" xmlns:xsd="">
+    <Language>ru</Language>
+    <Namespaces>
+        <Namespace Name="news">
+            <Entities>
+                <Entity Name="Category" Key="category">
+                    <Crumbs>
+                        <categoryList>Категории</categoryList>
+                        <categoryAdd>Добавить</categoryAdd>
+                        <categoryEdit>Редактировать</categoryEdit>
+                    </Crumbs>
+                    <Form>
+                        <titleLabel>Название</titleLabel>
+                        <orderNumberLabel>Порядковый номер</orderNumberLabel>
+                        <statusIdLabel>Статус</statusIdLabel>
+                    </Form>
+                    <List>
+                        <Title>Категории</Title>
+                        <Filter>
+                            <quickFilterPlaceholder></quickFilterPlaceholder>
+                            <title>Название</title>
+                            <orderNumber>Порядковый номер</orderNumber>
+                            <statusId>Статус</statusId>
+                            <ids></ids>
+                        </Filter>
+                        <Headers>
+                            <title>Название</title>
+                            <orderNumber>Порядковый номер</orderNumber>
+                            <status>Статус</status>
+                            <actions>Действия</actions>
+                        </Headers>
+                    </List>
+                </Entity>
+                <Entity Name="News" Key="news">
+                    <Crumbs>
+                        <newsList>Список новостей</newsList>
+                        <newsAdd>Добавить</newsAdd>
+                        <newsEdit>Редактировать</newsEdit>
+                    </Crumbs>
+                    <Form>
+                        <titleLabel>Название</titleLabel>
+                        <aliasLabel>Системное имя</aliasLabel>
+                        <contentLabel>Содержание</contentLabel>
+                        <categoryIdLabel>Категория</categoryIdLabel>
+                        <updatedAtLabel>Дата обновления</updatedAtLabel>
+                        <publicationDateLabel>Дата публикации</publicationDateLabel>
+                        <tagIdsLabel>Теги</tagIdsLabel>
+                        <statusIdLabel>Статус</statusIdLabel>
+                    </Form>
+                    <List>
+                        <Title>Список новостей</Title>
+                        <Filter>
+                            <quickFilterPlaceholder></quickFilterPlaceholder>
+                            <title>Название</title>
+                            <alias>Системное имя</alias>
+                            <content>Содержание</content>
+                            <categoryId>Категория</categoryId>
+                            <createdAt>Создано</createdAt>
+                            <updatedAt>Дата обновления</updatedAt>
+                            <publicationDate>Дата публикации</publicationDate>
+                            <statusId>Статус</statusId>
+                            <ids></ids>
+                            <notId></notId>
+                        </Filter>
+                        <Headers>
+                            <title>Название</title>
+                            <alias>Системное имя</alias>
+                            <content>Содержание</content>
+                            <category>Категория</category>
+                            <updatedAt></updatedAt>
+                            <publicationDate></publicationDate>
+                            <status>Статус</status>
+                            <actions>Действия</actions>
+                        </Headers>
+                    </List>
+                </Entity>
+                <Entity Name="Tag" Key="tag">
+                    <Crumbs>
+                        <tagList>Теги</tagList>
+                        <tagAdd>Добавить</tagAdd>
+                        <tagEdit>Редактировать</tagEdit>
+                    </Crumbs>
+                    <Form>
+                        <titleLabel>Название</titleLabel>
+                        <statusIdLabel>Статус</statusIdLabel>
+                    </Form>
+                    <List>
+                        <Title>Теги</Title>
+                        <Filter>
+                            <quickFilterPlaceholder>название</quickFilterPlaceholder>
+                            <title>Название</title>
+                            <statusId>Статус</statusId>
+                            <ids></ids>
+                        </Filter>
+                        <Headers>
+                            <title>Название</title>
+                            <status>Статус</status>
+                            <actions>Действия</actions>
+                        </Headers>
+                    </List>
+                </Entity>
+            </Entities>
+        </Namespace>
+    </Namespaces>
+</Translation>
